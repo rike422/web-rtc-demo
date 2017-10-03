@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+    // ログアウトボタン
+    button#logout.hide ログアウト
+    form#loginForm
+        // ログインフォーム
+        div
+            label(for="userName") ユーザー名：
+            input#userName(type="text")
+        button#submit ログイン
+    // 参加者リスト
+    ul#peers.hide
+    div
+        // 映像表示エリア
+        video#localStream(muted="", autoplay="")
+        // 自分
+        span#remoteStreams
+        // 相手
+    // 終了ボタン
+    button#bye.hide 終了
+
